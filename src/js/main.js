@@ -1,21 +1,14 @@
-const sum = require('./module/sum.js')
+'use strict';
+import $ from 'jquery'
+import 'slick-carousel'
 
-function pageLoaded() {
-    const btnHeader = document.querySelector(".header__btn"),
-        btnRightSide = document.querySelector(".rightside-menu__close"),
-        rightSideMenu = document.querySelector(".rightside-menu")
+$(function () {
 
-    const closeRightSideMenu = () => {
-        rightSideMenu.classList.remove('rightside-menu--close')
-    }
+    $('.header__btn').on('click', function () {
+        $('.rightside-menu').removeClass('rightside-menu--close')
+    })
+    $('.rightside-menu__close').on('click', function () {
+        $('.rightside-menu').addClass('rightside-menu--close')
+    })
 
-    const openRightSideMenu = () => {
-        rightSideMenu.classList.add('rightside-menu--close')
-
-    }
-
-    btnHeader.addEventListener("click", closeRightSideMenu)
-    btnRightSide.addEventListener("click", openRightSideMenu)
-}
-
-document.addEventListener("DOMContentLoaded", pageLoaded)
+})
