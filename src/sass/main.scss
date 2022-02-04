@@ -4,7 +4,6 @@
 @import "./chunk/libs";
 @import "./chunk/global";
 
-// @import 'chunk/*.scss';
 
 .header {
   &__inner {
@@ -85,7 +84,7 @@
 
     &::before {
       content: "";
-      background-image: url(../images/envelope.svg);
+      background-image: url(../img/envelope.svg);
       position: absolute;
       top: 8px;
       left: 0;
@@ -147,28 +146,28 @@
   }
 
   &__social-link--facebook::before {
-    background-image: url(../images/facebook.svg);
+    background-image: url(../img/facebook.svg);
   }
 
   &__social-link--instagram::before {
-    background-image: url(../images/instagram.svg);
+    background-image: url(../img/instagram.svg);
     width: 14px;
     height: 14px;
     top: 4px;
   }
 
   &__social-link--pinterest::before {
-    background-image: url(../images/pinterest.svg);
+    background-image: url(../img/pinterest.svg);
   }
 
   &__social-link--whatsapp::before {
-    background-image: url(../images/whatsapp.svg);
+    background-image: url(../img/whatsapp.svg);
     width: 14px;
     height: 14px;
   }
 
   &__social-link--youtube::before {
-    background-image: url(../images/youtube.svg);
+    background-image: url(../img/youtube.svg);
     width: 18px;
     height: 12px;
     top: 4px;
@@ -201,11 +200,13 @@
 }
 
 .rightside-menu {
+  z-index: 1;
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
   width: 100%;
+  height: 100%;
   max-width: 694px;
   background-color: #fff;
   padding-top: 40px;
@@ -268,3 +269,176 @@
     max-width: 485px;
   }
 }
+
+.top {
+  &__inner {
+    padding-bottom: 70px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url(../img/slider-bg.jpg);
+      width: 100%;
+      height: 722px;
+      top: 0;
+      z-index: -1;
+    }
+  }
+
+  &__slider-item {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__slider-img {
+    margin-left: -14%;
+    max-width: 703px;
+    height: 815px;
+    object-fit: cover;
+  }
+
+  &__slider-info {
+    width: 635px;
+    margin-left: 25px;
+  }
+
+  &__slider-title {
+    color: $title;
+    font-weight: bold;
+    font-size: 110px;
+    line-height: 135px;
+    padding-bottom: 26px;
+    margin-bottom: 26px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      left: 0;
+      bottom: 0;
+      width: 185px;
+      background: #6D7278;
+    }
+  }
+
+  &__slider-text {
+    max-width: 585px;
+  }
+
+
+}
+
+
+.new-collection {
+  text-align: center;
+  padding: 45px 0 105px;
+
+  &__title {
+    color: $title;
+    font-size: 36px;
+    line-height: 51px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 250px;
+      margin: 0 auto;
+      background: #6D7278;
+    }
+  }
+
+  &__text {
+    max-width: 730px;
+    margin: 0 auto 30px;
+  }
+}
+
+.collection {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+
+  &__item {
+    position: relative;
+
+    &:hover {
+      .collection__info {
+        opacity: 1;
+      }
+    }
+
+  }
+
+  &__images {
+    min-height: 350px;
+    object-fit: cover;
+  }
+
+  &__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#fff, .7);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all .5s;
+
+  }
+
+  &__info-title {
+    font-size: 20px;
+    line-height: 25px;
+    color: $title;
+    padding-bottom: 19px;
+    margin-bottom: 19px;
+    position: relative;
+    font-weight: 700;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 80%;
+      margin: 0 auto;
+      background: #6D7278;
+    }
+  }
+
+  &__info-text {
+    font-weight: 600;
+    font-size: 14px;
+    color: #707070
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.collection__info {}
+
+.collection__info-title {}
