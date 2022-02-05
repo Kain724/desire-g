@@ -305,6 +305,7 @@
   }
 
   &__slider-title {
+    @extend %title-font;
     color: $title;
     font-weight: bold;
     font-size: 110px;
@@ -337,6 +338,7 @@
   padding: 45px 0 105px;
 
   &__title {
+    @extend %title-font;
     color: $title;
     font-size: 36px;
     line-height: 51px;
@@ -402,13 +404,13 @@
   }
 
   &__info-title {
+    @extend %title-font;
     font-size: 20px;
     line-height: 25px;
     color: $title;
     padding-bottom: 19px;
     margin-bottom: 19px;
     position: relative;
-    font-weight: 700;
 
     &::after {
       content: '';
@@ -432,13 +434,126 @@
 
 
 
+.decor {
+  padding: 170px 0 155px;
+  background-image: url(../img/decor-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 600px;
 
+  &__title {
+    color: $title;
+    @extend %title-font;
+    font-size: 60px;
+    line-height: 80px;
+    margin-bottom: 22px;
+    padding-bottom: 22px;
+    position: relative;
 
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      width: 200px;
+      margin: 0 auto;
+      background: #6D7278;
+    }
+  }
 
+  &__text {
+    max-width: 540px;
 
+  }
+}
 
+.work-path {
+  padding: 80px 0 30px;
 
+  &__title {
+    @extend %title-font;
+    text-align: center;
+    color: $title;
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 51px;
+  }
 
-.collection__info {}
+  &__items {}
 
-.collection__info-title {}
+  &__items-box {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 2px solid rgba($title, .7);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      bottom: -5px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $title;
+    }
+  }
+
+  &__item {
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+  }
+
+  &__item--production {
+    margin-left: 317px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 20px;
+      width: 2px;
+      background: rgba($title, .7)
+    }
+  }
+
+  &__item--production,
+  &__item--consultation {
+    padding-bottom: 3px;
+
+  }
+
+  &__item--measuring {
+    padding-top: 38px;
+    margin-left: 305px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 2px;
+      background: rgba($title, .7)
+    }
+  }
+
+  &__item-img {}
+
+  &__item-title {
+    margin-left: 13px;
+    color: $title;
+    @extend %title-font;
+
+  }
+
+  &__item-text {
+    margin-top: 13px;
+  }
+}
