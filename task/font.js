@@ -6,6 +6,7 @@ const {
 
 //Конфигурация
 const path = require('../config/path.js')
+// const path = require('../config/path.js/index.js')
 const app = require('../config/app.js')
 
 //Плагины
@@ -19,12 +20,12 @@ const ttf2woff2 = require('gulp-ttf2woff2')
 // обработка FONT
 const font = () => {
     return src(path.font.src)
-        // .pipe(plumber({
-        //     errorHandler: notify.onError(error => ({
-        //         title: 'font',
-        //         message: error.massage,
-        //     }))
-        // }))
+        .pipe(plumber({
+            errorHandler: notify.onError(error => ({
+                title: 'font',
+                message: error.massage,
+            }))
+        }))
         .pipe(newer(path.font.dest))
         .pipe(fonter(app.fonter))
         .pipe(dest(path.font.dest))

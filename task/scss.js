@@ -6,6 +6,7 @@ const {
 
 //Конфигурация
 const path = require('../config/path.js')
+// const path = require('../config/path.js/index.js')
 
 
 
@@ -33,12 +34,12 @@ const scss = () => {
     return src(path.scss.src, {
             sourcemaps: app.isDev
         })
-        // .pipe(plumber({
-        //     errorHandler: notify.onError(error => ({
-        //         title: 'SCSS',
-        //         message: error.massage,
-        //     }))
-        // }))
+        .pipe(plumber({
+            errorHandler: notify.onError(error => ({
+                title: 'SCSS',
+                message: error.massage,
+            }))
+        }))
         .pipe(sassGlob())
         .pipe(sass())
         .pipe(webpCss())

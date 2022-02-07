@@ -2,6 +2,7 @@ const del = require('del') // каждый раз удаляет public с не�
 
 //Конфигурация 
 const path = require('../config/path.js')
+// const path = require('../config/path.js/index.js')
 
 
 // Удаление директории

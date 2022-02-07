@@ -6,6 +6,7 @@ const {
 
 //Конфигурация
 const path = require('../config/path.js')
+// const path = require('../config/path.js/index.js')
 const app = require('../config/app.js')
 
 
@@ -30,12 +31,12 @@ const js = () => {
     return src(path.js.src, {
         sourcemaps: app.isDev
     })
-        // .pipe(plumber({
-        //     errorHandler: notify.onError(error => ({
-        //         title: 'js',
-        //         message: error.massage,
-        //     }))
-        // }))
+        .pipe(plumber({
+            errorHandler: notify.onError(error => ({
+                title: 'js',
+                message: error.massage,
+            }))
+        }))
         .pipe(babel())
         .pipe(webpack(app.webpack))
         // .pipe(uglify()) //  при использовании webpack uglify не нужен

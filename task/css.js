@@ -6,6 +6,7 @@ const {
 
 //Конфигурация
 const path = require('../config/path.js')
+// const path = require('../config/path.js/index.js')
 const app = require('../config/app.js')
 
 
@@ -32,12 +33,12 @@ const css = () => {
     return src(path.css.src, {
             sourcemaps: app.isDev
         })
-        // .pipe(plumber({
-        //     errorHandler: notify.onError(error => ({
-        //         title: 'CSS',
-        //         message: error.massage,
-        //     }))
-        // }))
+        .pipe(plumber({
+            errorHandler: notify.onError(error => ({
+                title: 'CSS',
+                message: error.massage,
+            }))
+        }))
         .pipe(concat('main.css'))
         .pipe(cssimport())
         .pipe(webpCss())

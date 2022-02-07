@@ -6,6 +6,7 @@ const {
 
 //Конфигурация
 const path = require('../config/path.js')
+// const path = require('../config/path.js/index.js')
 const app = require('../config/app.js')
 
 
@@ -21,12 +22,12 @@ const webpHtml = require('gulp-webp-html')
 // обработка HTML
 const html = () => {
     return src(path.html.src)
-        // .pipe(plumber({
-        //     errorHandler: notify.onError(error => ({
-        //         title: 'HTML',
-        //         message: error.massage,
-        //     }))
-        // }))
+        .pipe(plumber({
+            errorHandler: notify.onError(error => ({
+                title: 'HTML',
+                message: error.massage,
+            }))
+        }))
         .pipe(fileInclude())
         .pipe(webpHtml())
         .pipe(size({
