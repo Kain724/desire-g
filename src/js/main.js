@@ -2,6 +2,7 @@
 import $ from 'jquery'
 import 'slick-carousel'
 import mixitup from 'mixitup';
+import { Fancybox } from "@fancyapps/ui"
 
 
 $(function () {
