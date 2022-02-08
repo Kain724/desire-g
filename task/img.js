@@ -32,12 +32,12 @@ const gulpif = require('gulp-if') // формат от гугла
 // обработка IMG
 const img = () => {
     return src(path.img.src)
-        .pipe(plumber({
-            errorHandler: notify.onError(error => ({
-                title: 'img',
-                message: error.massage,
-            }))
-        }))
+        // .pipe(plumber({
+        //     errorHandler: notify.onError(error => ({
+        //         title: 'img',
+        //         message: error.massage,
+        //     }))
+        // }))
         .pipe(newer(path.img.dest))
         .pipe(webp())
         .pipe(dest(path.img.dest))

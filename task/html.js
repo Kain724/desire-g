@@ -22,12 +22,12 @@ const webpHtml = require('gulp-webp-html')
 // обработка HTML
 const html = () => {
     return src(path.html.src)
-        .pipe(plumber({
-            errorHandler: notify.onError(error => ({
-                title: 'HTML',
-                message: error.massage,
-            }))
-        }))
+        // .pipe(plumber({
+        //     errorHandler: notify.onError(error => ({
+        //         title: 'HTML',
+        //         message: error.massage,
+        //     }))
+        // }))
         .pipe(fileInclude())
         .pipe(webpHtml())
         .pipe(size({
