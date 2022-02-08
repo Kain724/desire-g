@@ -177,3 +177,19 @@
         background-color: $title;
     }
 }
+
+.partners {
+    padding: 16px 0 60px;
+    padding-bottom: 70px;
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    &__item {
+        display: block;
+         margin: 0 auto;
+       
+    }
+}
