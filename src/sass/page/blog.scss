@@ -1,0 +1,200 @@
+.blog {
+  padding: 60px 0 100px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-items {
+    max-width: 730px;
+  }
+
+  &__item {
+    margin-bottom: 80px;
+  }
+
+  &__item-img {
+    max-width: 730px;
+  }
+
+  &__category {
+    margin-bottom: 36px;
+  }
+
+  &__item-info {
+    padding: 25px 0 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #707070;
+
+    a {
+      color: inherit
+    }
+  }
+
+  &__item-title {
+    font-size: 24px;
+    line-height: 38px;
+    margin-bottom: 6px;
+    color: $title;
+    @extend%title-font;
+
+
+  }
+
+  &__tags__title,
+  &__category-title {
+    margin-bottom: 15px;
+    color: $title;
+    @extend%title-font;
+    line-height: 23px;
+  }
+
+  &__blockquote{
+    background: rgba(223, 223, 223, 0.5);
+    margin-bottom: 50px;
+    padding: 54px 64px;
+    
+  }
+
+  &__category-list {}
+
+  &__category-item {
+    margin-bottom: 12px;
+  }
+
+  &__category-link {
+    color: inherit;
+
+  }
+
+  &__tags {
+    margin-bottom: 50px;
+  }
+
+  &__tags-link {
+    color: #8F8D8D;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0 16px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    border: 1px solid rgba(#454647, .5);
+    border-radius: 14px;
+
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__social-item {
+    margin-right: 20px;
+  }
+
+  &__social-link {}
+
+  &__social {}
+
+  &__social-item {}
+
+  &__social-link {}
+
+}
+
+
+.pagination {
+
+  &__arrow {}
+
+  &__arrow-icon {}
+
+  &__list {}
+
+  &__list-item {}
+
+  &__list-num {}
+
+  &__list-num--active {}
+
+}
+
+
+
+
+
+
+
+
+
+.aside {
+  width: 350px;
+  margin-left: 30px;
+
+  &__search {
+    position: relative;
+    margin-bottom: 44px;
+  }
+
+  &__search-input {
+    padding: 6px 45px 6px 18px;
+    border: 1px solid rgba($title, .7);
+    border-radius: 20px;
+    display: block;
+    display: block;
+    width: 100%;
+
+    &::placeholder {
+      font-family: 'Open Sans',
+        sans-se rif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 27px;
+      color: #A1A1A1;
+    }
+  }
+
+  &__search-btn {
+    border: none;
+    position: absolute;
+    background-color: transparent;
+    top: 10px;
+    right: 13px;
+    cursor: pointer;
+  }
+
+}
+
+
+
+
+.recent-posts {
+  margin-bottom: 40px;
+
+  &__title {
+    margin-bottom: 24px;
+    color: $title;
+    @extend%title-font;
+    line-height: 23px;
+  }
+
+  &__list {}
+
+  &__item {
+
+    margin-bottom: 11px;
+  }
+
+  &__item-title {
+    display: block;
+    color: inherit;
+  }
+
+  &__date,
+  &__author {
+    color: #a1a1a1;
+    font-size: 14px;
+  }
+}
