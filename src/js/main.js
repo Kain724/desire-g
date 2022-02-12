@@ -30,9 +30,17 @@ $(function () {
 
     })
 
-    var mixer = mixitup('.gallery__inner', {
-        load: {
-            filter: '.living'
-        }
-    });
+
+
+    $('.article-slider__box').slick({
+        prevArrow: '<button type="button" class="article-slider__arrow article-slider__arrowleft"> <img src="../img/blog/img-arrow-left.svg" alt="img"></button> ',
+        nextArrow: '<button type="button" class="article-slider__arrow article-slider__arrowright"> <img src="../img/blog/img-arrow-right.svg" alt="img"></button> ',
+
+    })
+
+var mixer = mixitup('.gallery__inner', {
+    load: {
+        filter: '.living'
+    }
+});
 })
