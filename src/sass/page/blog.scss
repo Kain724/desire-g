@@ -29,7 +29,7 @@
     color: #707070;
 
     a {
-      color: inherit
+      color: inherit;
     }
 
   }
@@ -69,7 +69,7 @@
 
   }
 
-  &__blockquote-authoring {
+  &__blockquote-author {
     font-size: 16px;
     line-height: 22px;
     color: $title;
@@ -78,6 +78,8 @@
     padding-top: 23px;
     position: relative;
     font-style: normal;
+
+
 
     &::before {
       content: '';
@@ -214,11 +216,12 @@
 
   &__list-num--active {
     color: $title;
-    
+
   }
 
   &__arrow--disabled {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
   }
 
 }
@@ -297,5 +300,6 @@
   &__author {
     color: #a1a1a1;
     font-size: 14px;
+
   }
 }
