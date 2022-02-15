@@ -6,13 +6,17 @@
 
     &__list {
         display: flex;
+        overflow-x: auto;
+    }
+
+    &__item {
+        position: relative;
+        padding-right: 8px;
     }
 
     &__item::after {
         content: '/';
-        margin-left: -4px;
-        margin-right: 4px;
-
+        position: absolute;
 
     }
 
@@ -190,8 +194,9 @@
     }
 
     &__item {
+        width: 100%;
         display: block;
-         margin: 0 auto;
-       
+        margin: 0 auto;
+
     }
 }

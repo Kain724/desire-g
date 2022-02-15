@@ -24,6 +24,10 @@
     padding: 0;
     cursor: pointer;
   }
+
+  &__btn-menu {
+    display: none;
+  }
 }
 
 .logo {
@@ -50,18 +54,19 @@
     line-height: 22px;
   }
 
-  &__list-link--active{
+  &__list-link--active {
     padding-bottom: 4px;
     position: relative;
-    &::after{
-      content:'';
+
+    &::after {
+      content: '';
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
       height: 2px;
       border-radius: 1px;
-      background-color: rgba($title,.7);                                      
+      background-color: rgba($title, .7);
 
     }
   }
@@ -393,7 +398,8 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 30px;
-padding-bottom: 70px;
+  padding-bottom: 70px;
+
   &__item {
     position: relative;
 
@@ -666,7 +672,9 @@ padding-bottom: 70px;
     display: inline-block;
   }
 
-  &__img {}
+  &__img {
+    width: 100%;
+  }
 
   &-links {
     margin-bottom: 9px;
@@ -695,6 +703,9 @@ padding-bottom: 70px;
 
   }
 
-  &__item-title {}
 
 }
+
+
+
+@import "./chunk/media";
